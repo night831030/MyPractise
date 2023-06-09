@@ -1,0 +1,93 @@
+<!-- DOCTYPE為聲明此頁面滿足html規範 -->
+<!DOCTYPE html>
+<!-- lang為語言屬性 -->
+<html lang="en">
+    <!-- 頁首 -->
+    <head>
+        <!-- meta為頁面TAG -->
+        <meta charset="UTF-8">
+        <title>SunriseShotApp</title> 
+        <style>
+            body{
+                background-color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 頁面主體標籤 -->
+        <main> 
+            <!-- h為標題字，數字越小重要性越高 -->
+            <h1>SunPhotoApp</h1> 
+            <h2>SunPhotos</h2>
+            <!-- section為區隔標籤 -->
+            <section>
+            <!-- p為文本 -->
+            <p>We hava more sun <a href='https://www.pexels.com/zh-tw/' >photos</a> in our page</p>
+            <!-- img置入圖片 src為圖片連結 alt為圖片屬性 -->
+            <a href='https://www.pexels.com/zh-tw/photo/36717/'><img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg" alt="The sun behing the tree"></a>
+            <!-- a為錨點 href後為鏈結 target屬性_blank為新分頁開啟 中間為鏈結顯示文字 -->
+            <a href='https://www.pexels.com/zh-tw/photo/36717/' target="_blank">The free photos page of this picture.</a> 
+            </section>
+            <section>
+                <h2>sun lists</h2>
+                <h3>about sun:</h3>
+                <!-- ul為無序列表 -->
+                <ul>
+                    <!-- li為列表項目 -->
+                    <li>sun light</li>
+                    <li>sun warm</li>
+                </ul>
+                <!-- figure將內容獨立 -->
+                <figure>
+                <img src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="sunrise on sea">
+                <!-- figcaption添加標題 --><!-- em為斜體 -->
+                <figcaption>shot <em>sunrise</em> at the beach</figcaption>
+                </figure>
+                <h3>shot place of sun</h3>
+                <!-- ol為有序列表 -->
+                <ol>
+                    <li>beach</li>
+                    <li>mountain</li>
+                    <li>any where</li>
+                </ol>
+                <figure>
+                    <img src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="sunrise on mountain">
+                    <!-- strong為粗體 -->
+                    <figcaption>shot sunrise at the <strong>mountain</strong></figcaption>
+                </figure>
+            </section>
+            <section>
+                <h2>sunrise time</h2>
+                <!-- form為表單，action為表單內容的路徑 -->
+                <form action="">
+                    <!-- fieldset為區塊 -->                    
+                    <fieldset>
+                        <!-- legend為fieldset標題 -->
+                        <legend>what's the weather at you shoting?</legend>
+                        <!-- type屬性radio為單選選項，id屬性為選項標籤 --><!-- label讓文字與選項按鈕連動，點文字同點按鈕 -->
+                        <label><input type="radio" id="cloudy" name="weather" value="cloudy">cloudy</label>
+                        <!-- name屬性限制同屬性選項不可複選 --><!-- value為選項的值 -->
+                        <label><input type="radio" id="rain" name="weather" value="rain">rain</label>
+                        <!-- checked為默認選取 -->
+                        <label><input type="radio" id="sunny" name="weather" value="sunny" checked>sunny</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>which place you like?</legend>
+                        <!-- type屬性checkbox為勾選框 --><!-- for屬性關聯input-id -->
+                        <input type="checkbox" id="sea" name="like" value="sea"> <label for="sea">sea</label>
+                        <input type="checkbox" id="mountain" name="like" value="mountain"> <label for="mountain">mountain</label>
+                        <input type="checkbox" id="keyin" name="like" value="keyin"> <label for="keyin"><input type="text"></label>
+                    </fieldset>
+                    <!-- input為輸入欄位，type屬性text為文本，placeholder為輸入提示(灰字) -->
+                    <input type="text" name="time" placeholder="sunrise time" required>
+                    <!-- button為按鈕，type屬性submit為提交-->
+                    <button type="submit">sun rising</button>
+                </form>
+            </section>
+        </main>
+        <!-- 頁尾 -->
+        <footer>
+            <p>This <a href="https://www.pexels.com/zh-tw">Page</a> Is All Free And No Copyright.</p>
+        </footer>
+    </body>
+</html>

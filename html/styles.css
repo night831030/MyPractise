@@ -1,0 +1,109 @@
+/* style設定可獨立於css檔案，並於語法中連結套用
+style可以指定元素樣式
+指定元素可複數進行*/
+/*指定h1,h2,p標題對齊型式text-align為置中center */
+h1,h2,p{
+    text-align: center;
+}
+
+hr{
+    height: 2px; /*設定分隔線高*/
+    background-color: green; /*用背景色設定分隔線顏色*/
+    border-color: red; /*分隔線邊框色*/ /*邊框預設粗度為1px*/
+}
+
+.bottom-line{
+    margin-top: 25px;
+}
+
+body{    
+    background-image: url(https://images.pexels.com/photos/16210463/pexels-photo-16210463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); /*背景圖片*/
+    background-color:black; /* 背景顏色設定，可用顏色或RGB進行調整 */
+    font-family: sans-serif; /*調整字體*/
+    padding: 20px;
+}
+
+h1,h2{
+    font-family: Impact,serif; /*body設定整體字體下，仍可單獨調整字體，如第一個字體無法使用，則使用逗點後第二個預備字體*/
+}
+
+h1{
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.established{
+    font-style: italic; /*斜體字*/
+}
+
+.menu{ /*.開頭為自訂分類*/
+    max-width: 500px; /*限制最大寬度*/
+    width: 20%; /*width可調整部位寬度，可用象素單位px*/
+    background-color: burlywood;
+    margin-left: auto; /*畫面左邊界*/
+    margin-right: auto; /*畫面右邊界*/
+    padding-left: 20px; /*左邊界空隙*/
+    padding-right: 20px; /*右邊界空隙*/
+    padding-top: 20px; /*頂端空隙*/
+    padding-top: 20px; /*底部空隙*/
+    padding: 20px; /*四邊空隙相同可直接用padding取代*/
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: burlywood;
+    margin-top: -20px;
+}
+
+.item p{
+    display: inline-block; /*讓p項目再同一行*/
+    margin-top: 5px; /*行間上間距*/
+    margin-bottom: 5px; /*行間下間距*/
+    font-size: 18px; /*字體大小*/
+}
+
+.flavor,.drinks{
+    text-align: left; /*靠左*/
+    width: 75%;
+}
+
+.price{
+    text-align: right; /*靠右*/
+    width: 25%;
+}
+
+/*FOOTER*/
+footer{
+    font-size: 14px;
+}
+
+a{
+    color: black;
+}
+
+/*鏈結訪問後*/
+a:visited{    
+    color:violet
+}
+
+/*指在鏈結上時*/
+a:hover{
+    color: red;
+}
+
+/*被點擊時*/
+a:active{
+    color: gray;
+}
+
+.address{
+    margin-bottom: 5px;
+}

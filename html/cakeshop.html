@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <!-- title為網頁標題 -->
+        <title>Cake Menu</title>
+        <!-- meta為網頁搜尋標籤 -->
+        <meta charset="UTF-8">
+        <!-- link連結套用css檔中style設定 -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- 讓行動裝置與桌電、筆電上顯示畫面相同 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- div本身無特定功能，可用於單獨套用樣式或以class建立分類-->
+        <div class="menu">
+            <main>
+            <h1>Ink Cake</h1>
+            <p class="established">Est. 2023</p>
+            <!-- hr為分隔線 -->
+            <hr>
+            <!-- section為可獨立區塊 -->
+            <section>
+                <h2>Cake</h2>
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="cake icon">
+                <!-- article為完全獨立區塊，內容與該頁面本身可分開，獨立度較section高 -->
+                <article class="item">
+                    <!-- 不換行可刪除換行產生的空格，使兩個項目各佔50% -->
+                    <p class="flavor">blueberry</p><p class="price">9999.99</p>
+                </article>
+                <article class="item">
+                    <p class="flavor">strawberry</p><p class="price">8999.89</p>
+                </article> 
+                <article class="item">
+                    <p class="flavor">kiwi</p><p class="price">9000.99</p>
+                </article> 
+                <article class="item">
+                    <p class="flavor">apple</p><p class="price">8889.89</p>
+                </article> 
+                <article class="item">
+                    <p class="flavor">mango</p><p class="price">999999.99</p>
+                </article> 
+                <article class="item">
+                    <p class="flavor">coffee</p><p class="price">9900.99</p>
+                </article> 
+            </section>            
+            <section>
+                <h2>drinks</h2>
+                <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="drinks icon"/>
+                <article class="item">
+                    <p class="drinks">Milk tea</p><p class="price">-8999.89</p>
+                </article> 
+                <article class="item">
+                    <p class="drinks">coffee</p><p class="price">-8999.89</p>
+                </article> 
+                <article class="item">
+                    <p class="drinks">juice</p><p class="price">-8999.89</p>
+                </article> 
+                <article class="item">
+                    <p class="drinks">tea</p><p class="price">-8999.89</p>
+                </article> 
+            </section>
+            </main>    
+            <hr class="bottom-line">        
+            <footer>
+                <p><a href="">go to my another page</a></p>
+                <p>@#$%^! free 456 abc</p>
+            </footer>
+        </div>        
+    </body>
+</html>
