@@ -1,0 +1,12 @@
+<h1>Guestbook</h1>  	<!-- 頁面大標題 -->
+
+<div>     
+	{{.SignatureCount}} total signatures - <!-- 把SignatureCount值放進來 -->
+	<a href="/guestbook/new">Add Your Signature</a> <!-- 前往頁面的連結 -->
+</div>
+
+<div>
+	{{range .Signatures}} <!-- 遍歷取得簽名欄切片 -->
+		<p>{{.}}</p> 
+	{{end}}
+</div>
