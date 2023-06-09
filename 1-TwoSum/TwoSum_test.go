@@ -7,27 +7,27 @@ import (
 
 func TestTwoSum(t *testing.T) {
 	testclass := map[string]struct {
-		Input1 []int
-		Input2 int
-		Answer []int
+		input1 []int
+		input2 int
+		answer []int
 	}{
 		"class1": {
-			Input1: []int{9, 5, 3, 4},
-			Input2: 12,
-			Answer: []int{0, 2},
+			input1: []int{9, 5, 3, 4},
+			input2: 12,
+			answer: []int{0, 2},
 		},
 		"class2": {
-			Input1: []int{5, 9, 11, 78},
-			Input2: 87,
-			Answer: []int{1, 3},
+			input1: []int{5, 9, 11, 78},
+			input2: 87,
+			answer: []int{1, 3},
 		},
 	}
 
 	for name, tc := range testclass {
 		t.Run(name, func(t *testing.T) {
-			output := TwoSum(tc.Input1, tc.Input2)
-			if !reflect.DeepEqual(tc.Answer, output) {
-				t.Errorf("func is fail, expect %d but get %d", tc.Answer, output)
+			output := TwoSum(tc.input1, tc.input2)
+			if !reflect.DeepEqual(tc.answer, output) {
+				t.Errorf("func is fail, expect %d but get %d", tc.answer, output)
 			}
 		})
 

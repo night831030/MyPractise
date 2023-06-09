@@ -6,31 +6,31 @@ import (
 
 func TestPalindromeNumber(t *testing.T) {
 	testclass := map[string]struct {
-		Input  int
-		Answer bool
+		input  int
+		answer bool
 	}{
 		"class1": {
-			Input:  0,
-			Answer: true,
+			input:  0,
+			answer: true,
 		},
 		"class2": {
-			Input:  12321,
-			Answer: true,
+			input:  12321,
+			answer: true,
 		},
 		"class3": {
-			Input:  123321,
-			Answer: true,
+			input:  123321,
+			answer: true,
 		},
 		"class4": {
-			Input:  10,
-			Answer: false,
+			input:  10,
+			answer: false,
 		},
 	}
 	for name, tc := range testclass {
 		t.Run(name, func(t *testing.T) {
-			output := IsPalindrome(tc.Input)
-			if tc.Answer != output {
-				t.Errorf("func is fail, expect %t but get %t", tc.Answer, output)
+			output := IsPalindrome(tc.input)
+			if tc.answer != output {
+				t.Errorf("func is fail, expect %t but get %t", tc.answer, output)
 			}
 		})
 	}
