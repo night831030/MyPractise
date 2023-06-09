@@ -31,3 +31,27 @@ func countCharacters(words []string, chars string) (ans int) {
 	}
 	return
 }
+
+//以映射表
+func countCharacters2(words []string, chars string) (ans int) {
+	for _, word := range words {
+		have := false
+		letter := map[byte]int{}
+		for i := 0; i < len(chars); i++ {
+			letter[chars[i]]++
+		}
+		for j := 0; j < len(word); j++ {
+			if letter[word[j]] != 0 {
+				have = true
+				letter[word[j]]--
+			} else {
+				have = false
+				break
+			}
+		}
+		if have {
+			ans += len(word)
+		}
+	}
+	return
+}

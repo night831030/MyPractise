@@ -38,5 +38,12 @@ func TestCountCharacters(t *testing.T) {
 				t.Errorf("This func is fail,expect %d but get %d", tc.output, output)
 			}
 		})
+
+		t.Run(name, func(t *testing.T) {
+			output := countCharacters2(tc.input1, tc.input2)
+			if tc.output != output {
+				t.Errorf("This func2 is fail,expect %d but get %d", tc.output, output)
+			}
+		})
 	}
 }
