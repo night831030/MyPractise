@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>frist page for me</title>
+    </head>
+    <script>
+        function sayhollow() {
+            alert("welcome!!!you are NO.100 person as come this page!!!");
+        }
+        function changetext() {
+            document.getElementById("welcome").innerText = "you click it!!!!!!!!!!!!word was changed!!!!!!!!!!!(scream";
+        }
+        function greetUser() {
+            const name = document.getElementById("name").value;
+            document.getElementById("greeting").innerText = `Hellow!!, ${name}, welcome to here~`
+        }
+
+        let todos = [];
+        function loadingTodos() {
+            save = JSON.parse(localStorage.getItem("todos"));
+            if (save != "") {
+                save.forEach(item => {
+                        addTodo(item.text, item.completed);
+                });
+            }
+        }
+        
+        function addTodo(text = null, completed = false) {
+            const input = document.getElementById("todoInput");
+            const todoText = text || input.value;
+            
+            if (todoText.trim() !== "") {
+                const newItem = document.createElement("li");
+                
+                //create checkbox
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.style.margin = "10px";
+                
+                //change check box situation
+                checkbox.addEventListener("change", function() {
+                    if (checkbox.checked) {
+                        newItem.classList.add("completed");
+                    }else{
+                        newItem.classList.remove("completed");
+                    }
+                    const index = Array.from(document.getElementById("todoList").children).indexOf(newItem);
+                        if (index !== -1) {
+                            todos[index].completed = checkbox.checked;
+                            }
+                    saveTodo()
+                });
+                if (completed) {
+                    checkbox.checked = completed;
+                    newItem.classList.add("completed");
+                }
+                
+                //create text node
+                const textnode = document.createTextNode(todoText);
+                
+                //create delete button
+                const deletebutton = document.createElement("button");
+                deletebutton.innerText = "delete";
+                deletebutton.style.margin = "10px";
+                
+                //click to delete
+                deletebutton.addEventListener("click", function(){
+                    const index = Array.from(document.getElementById("todoList").children).indexOf(newItem);
+                        if (index !== -1) {
+                             todos.splice(index, 1); //delete this node from list
+                        }
+                    newItem.remove();
+                    saveTodo()
+                })
+                
+                //add button to list
+                newItem.appendChild(checkbox);
+                newItem.appendChild(textnode);
+                newItem.appendChild(deletebutton);
+                
+                document.getElementById("todoList").appendChild(newItem);
+                input.value = "";
+                                
+                todos.push({ text: todoText, completed: checkbox.checked});
+                saveTodo()
+            
+            }
+        function saveTodo() {
+            localStorage.setItem("todos", JSON.stringify(todos));
+            }
+        }
+        
+        window.onload = loadingTodos;
+    </script>
+    <body>
+        <button onclick="sayhollow()">hey~!</button>
+        <p id="welcome">welcome here</p>
+        <button onclick="changetext()">click this to change word</button>
+
+        <h1>hellow world!</h1>
+        <p>my frist page</p>
+        <img src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-superJumbo.jpg?quality=75&auto=webp" alt="a cute cat">
+        <p>
+            watch more? <a href="https://www.wikipedia.org/" target="_blank">go to wiki~</a>
+        </p>
+        
+        <h2>what's your nickname:</h2>
+        <input type="text" id="nickname">
+        <h2>connetion to us <span id="preview"></span></h2>
+        <form>
+            <label for="name">name:</label>
+            <input type="text" id="name" /><br /><br />
+            
+            <label for="email">email:</label>
+            <input type="email" id="email" /><br /><br />
+            
+            <label for="message">message:</label>
+            <textarea type="message" id="message" row="4" cols="50"></textarea><br /><br />
+            
+            <button type="submit" onclick="greetUser()">submit</button>
+            <p id="greeting"></p>
+        </form>
+        <button type="submit" onclick="greetUser()">submit</button>
+        <p id="greeting"></p>
+
+        <script>
+            const input = document.getElementById("nickname");
+            const preview = document.getElementById("preview");
+            
+            input.addEventListener("input", function(){
+                preview.innerText = input.value;
+            })
+        </script>
+
+        <h2>to do list:</h2>
+        <input type="text" id="todoInput" placeholder="do someting...">
+        <button onclick="addTodo()">add to do</button>
+
+        <ul id="todoList"></ul>
+    </body>
+</htmll>

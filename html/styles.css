@@ -51,7 +51,7 @@ h2{
     padding-left: 20px; /*左邊界空隙*/
     padding-right: 20px; /*右邊界空隙*/
     padding-top: 20px; /*頂端空隙*/
-    padding-top: 20px; /*底部空隙*/
+    padding-bottom: 20px; /*底部空隙*/
     padding: 20px; /*四邊空隙相同可直接用padding取代*/
 }
 
@@ -90,7 +90,7 @@ a{
 }
 
 /*鏈結訪問後*/
-a:visited{    
+a:visited{   
     color:violet
 }
 
