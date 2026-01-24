@@ -16,10 +16,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actiona/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Set up Go
-        uses: actiona/setup-go@v4
+        uses: actions/setup-go@v4
         with:
           go-version: '1.21'
 
