@@ -1,0 +1,15 @@
+name: practise ci 
+run-name: practise ci
+
+on:
+  push:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - 
