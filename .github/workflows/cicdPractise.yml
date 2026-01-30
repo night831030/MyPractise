@@ -1,5 +1,5 @@
-name: practise ci 
-run-name: practise ci
+name: practise cicd
+run-name: practise cicd
 
 on:
   push:
