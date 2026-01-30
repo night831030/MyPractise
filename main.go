@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main(){
-  fmt.print("This is mu practise artifact.")
+  fmt.Println("This is mu practise artifact.")
 }
